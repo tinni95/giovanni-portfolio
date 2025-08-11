@@ -4,6 +4,7 @@ import { closeMobilemenu } from "@/utlis/toggleMobilemenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
+import ThemeToggle from "@/components/common/ThemeToggle";
 
 export default function MobileMenu() {
   const pathname = usePathname();
@@ -48,6 +49,7 @@ export default function MobileMenu() {
               </a>
             </div>
             <div className="close-menu">
+              <ThemeToggle className="theme-toggle-mobile" />
               <button
                 className="close-button tmp-round-action-btn"
                 onClick={closeMobilemenu}

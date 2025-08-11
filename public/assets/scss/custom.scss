@@ -1,3 +1,48 @@
+// Theme Toggle Styles
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+  }
+  
+  .theme-toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: all 0.3s ease;
+  }
+}
+
+.tmp-white-version .theme-toggle-btn {
+  .theme-toggle-icon {
+    color: var(--color-heading);
+  }
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.theme-toggle-mobile {
+  margin-right: 10px;
+  
+  .theme-toggle-icon {
+    font-size: 18px;
+  }
+}
+
 .typeanimation {
   transition: width 0.58s ease-out !important;
   height: 100% !important;

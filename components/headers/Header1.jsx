@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { openSidebar } from "@/utlis/toggleSidebar";
 import { openMobilemenu } from "@/utlis/toggleMobilemenu";
+import ThemeToggle from "@/components/common/ThemeToggle";
 export default function Header1({
   darkLogo = "/assets/images/logo/white-logo-reeni.png",
   lightLogo = "/assets/images/logo/logo-white.png",
@@ -42,7 +43,9 @@ export default function Header1({
                     <a href="https://www.linkedin.com/in/gdamico241095/">
                       <i className="fa-brands fa-linkedin-in" />
                     </a>
-            
+                    <div className="social-link">
+                      <ThemeToggle className="theme-toggle-header d-none d-md-block" />
+                    </div>
                   </div>
                 </div>
                 <div className="actions-area">

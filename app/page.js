@@ -1,19 +1,15 @@
 import Copyright from "@/components/footers/Copyright";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
-import Blogs from "@/components/common/Blogs";
 import Brands from "@/components/common/Brands";
-import Contact from "@/components/common/Contact2";
 import Education from "@/components/common/Education2";
 import Facts from "@/components/common/Facts";
-import Hero from "@/components/homes/home-1/Hero";
+import Hero from "@/components/homes/home/Hero";
 import Portfolio from "@/components/common/Portfolio2";
-import Services from "@/components/common/Services";
-import Services2 from "@/components/common/Services3";
 import Skills from "@/components/common/Skills";
-import Skills2 from "@/components/common/Skills2";
-import Testimonials from "@/components/homes/home-1/Testimonials";
 import CommonComponents from "@/components/common/CommonComponents";
+import ThemeWrapper from "@/components/common/ThemeWrapper";
+import ThemeAwareWrapper from "@/components/common/ThemeAwareWrapper";
 
 export const metadata = {
   title:
@@ -23,21 +19,23 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <>
+    <ThemeWrapper>
       <Header1 />
       <Hero />
       <div style={{  height: "72px" }}>
       </div>
-      <Facts />
-      <Skills />
-      <Education />
-      <Brands />
-      <Portfolio />
+      <ThemeAwareWrapper>
+        <Facts />
+        <Skills />
+        <Education />
+        <Brands />
+        <Portfolio />
+      </ThemeAwareWrapper>
       <div style={{  height: "72px" }}>
       </div>
       <Footer1 />
       <Copyright />
       <CommonComponents />
-    </>
+    </ThemeWrapper>
   );
 }
