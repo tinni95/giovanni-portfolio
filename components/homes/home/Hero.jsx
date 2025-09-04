@@ -13,7 +13,7 @@ export default function Hero() {
                 <Image
                   className="tmp-scroll-trigger tmp-zoom-in animation-order-1"
                   alt="banner-img"
-                  src="/assets/images/banner/subject.png"
+                  src="/assets/images/banner/Giovanni.png"
                   width={486}
                   height={781}
                 />
