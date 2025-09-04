@@ -16,7 +16,21 @@ export default function Chat() {
           </div>
           <form
             className="tmp-dynamic-form"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+              const name = formData.get('name');
+              const email = formData.get('email');
+              const message = formData.get('message');
+              
+              // Create WhatsApp message with form data
+              const whatsappMessage = `Hi! I'm ${name} (${email}). ${message}`;
+              const encodedMessage = encodeURIComponent(whatsappMessage);
+              const whatsappUrl = `https://wa.me/393516620601?text=${encodedMessage}`;
+              
+              // Open WhatsApp chat
+              window.open(whatsappUrl, '_blank');
+            }}
           >
             <div className="field">
               <input
