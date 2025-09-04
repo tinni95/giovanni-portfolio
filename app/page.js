@@ -10,6 +10,8 @@ import Skills from "@/components/common/Skills";
 import CommonComponents from "@/components/common/CommonComponents";
 import ThemeWrapper from "@/components/common/ThemeWrapper";
 import ThemeAwareWrapper from "@/components/common/ThemeAwareWrapper";
+import Footer2 from "@/components/footers/Footer2";
+import Footer3 from "@/components/footers/Footer3";
 
 export const metadata = {
   title:
@@ -33,7 +35,7 @@ export default function Home() {
       </ThemeAwareWrapper>
       <div style={{  height: "72px" }}>
       </div>
-      <Footer1 />
+      <Footer3 />
       <Copyright />
       <CommonComponents />
     </ThemeWrapper>

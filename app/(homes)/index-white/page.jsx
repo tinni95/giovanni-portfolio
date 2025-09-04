@@ -23,7 +23,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {" "}
       <div className="tmp-white-version">
         <Header1 />
         <Hero />
