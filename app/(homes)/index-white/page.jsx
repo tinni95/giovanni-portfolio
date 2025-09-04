@@ -6,13 +6,13 @@ import Brands from "@/components/common/Brands";
 import Contact from "@/components/common/Contact2";
 import Education from "@/components/common/Education2";
 import Facts from "@/components/common/Facts";
-import Hero from "@/components/homes/home-1/Hero";
+import Hero from "@/components/homes/home/Hero";
 import Portfolio from "@/components/common/Portfolio2";
 import Services from "@/components/common/Services";
 import Services2 from "@/components/common/Services3";
 import Skills from "@/components/common/Skills";
 import Skills2 from "@/components/common/Skills2";
-import Testimonials from "@/components/homes/home-1/Testimonials";
+import Testimonials from "@/components/homes/home/Testimonials";
 import CommonComponents from "@/components/common/CommonComponents";
 export const metadata = {
   title:
