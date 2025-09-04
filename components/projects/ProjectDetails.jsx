@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Appointment from "./Appointment";
+import { IPhoneFrame } from "../IPhoneFrame";
 export default function ProjectDetails({ portfolioItem }) {
   return (
     <div className="project-details-area-wrapper tmp-section-gap">
@@ -60,6 +61,7 @@ export default function ProjectDetails({ portfolioItem }) {
                   </li>
                 </ul>
               </div>
+             
               <h2 className="mini-title">
                 Elevate Your Business with IT Solutions
               </h2>
@@ -144,6 +146,14 @@ export default function ProjectDetails({ portfolioItem }) {
                 <div className="project-details-info">
                   Tags: <span>Host Web Design</span>
                 </div>
+              </div>
+            </div>
+            
+            {/* Separate sticky iPhone frame container */}
+            <div className="sticky-iphone-frame" style={{ position: 'sticky', top: '120px', marginTop: '30px' }}>
+              <div className="transform hover:scale-105 transition-all duration-300">
+                <IPhoneFrame vimeoId={portfolioItem.appVideo} className="drop-shadow-2xl" />
+                <p className="text-center mt-4 text-sm text-foreground/60 font-medium">Mobile Experience</p>
               </div>
             </div>
           </div>

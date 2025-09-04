@@ -9,7 +9,7 @@ export default function Header2({
   lightLogo = "/assets/images/logo/logo-white.png",
 }) {
   return (
-    <header className="tmp-header-area-start header-one header--sticky header--transparent">
+    <header className="tmp-header-area-start header-one header--sticky header--transparent shadow-lg">
       {/* header mid area start */}
       <div className="container">
         <div className="row">

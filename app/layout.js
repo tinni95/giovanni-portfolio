@@ -1,3 +1,4 @@
+import "./globals.css";
 import "../public/assets/scss/main.scss";
 import "odometer/themes/odometer-theme-default.css"; // Import theme
 import "react-toastify/dist/ReactToastify.css";

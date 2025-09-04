@@ -1,9 +1,8 @@
 import { cn } from "@/utlis/utils";
 
-
 export const IPhoneFrame = ({ vimeoId, className }) => {
   return (
-    <div className={cn("relative mx-auto w-full", className)}>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} className={cn("relative mx-auto w-full", className)}>
       {/* iPhone Frame */}
       <div className="relative w-full max-w-[280px] aspect-[280/570] bg-iphone-frame rounded-[3rem] p-2 shadow-phone">
         {/* Camera notch */}
