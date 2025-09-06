@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Appointment from "./Appointment";
 import { IPhoneFrame } from "../IPhoneFrame";
+import WebExperience from "./WebExperience";
 
 export default function ProjectDetails({ portfolioItem }) {
   // Markdown content is now processed at build time and included in portfolioItem.markdownContent
@@ -103,11 +104,12 @@ export default function ProjectDetails({ portfolioItem }) {
                   </div>
                 </div>
               </div>
+              </div>
+              
+              {/* Web Video Section */}
+              <WebExperience webVideo={portfolioItem.webVideo} title={portfolioItem.title} />
+ 
             </div>
-            {/* Tpm Get In touch start */}
-            <Appointment />
-            {/* Tpm Get In touch End */}
-          </div>
           <div className="col-lg-4">
             <div className="signle-side-bar project-details-area tmponhover">
               <div className="header">
@@ -129,31 +131,7 @@ export default function ProjectDetails({ portfolioItem }) {
               </div>
             </div>
             
-            {/* Services Section */}
-            {portfolioItem.projectDetails?.services && (
-              <div className="signle-side-bar project-details-area tmponhover mt-4">
-                <div className="header">
-                  <h3 className="title">Services Provided</h3>
-                </div>
-                <div className="body">
-                  <div className="check-box-wrap">
-                    <ul>
-                      {portfolioItem.projectDetails.services.map((service, index) => (
-                        <li key={index}>
-                          <h4 className="check-box-item">
-                            <span>
-                              <i className="fa-solid fa-circle-check" />
-                            </span>
-                            {service}
-                          </h4>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            )}
-            
+     
             {/* Separate sticky iPhone frame container */}
             <div className="sticky-iphone-frame" style={{ position: 'sticky', top: '120px', marginTop: '30px' }}>
               <div className="transform hover:scale-105 transition-all duration-300">
