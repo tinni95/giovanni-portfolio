@@ -25,7 +25,7 @@ export default function Home() {
     <>
       <div className="tmp-white-version">
         <Header1 />
-        <Hero />
+        <Hero isLight />
         <Services isLight />
         <Facts />
         <Skills />

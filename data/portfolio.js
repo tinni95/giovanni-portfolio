@@ -57,7 +57,8 @@ export const portfolioItems2 = [
     height: 1040,
     title: "Cozy Desk - Work Cozy Everywhere",
     description: "Full Stack Developer - Cofounder",
-    appVideo: 1002095728
+    appVideo: 1002095728,
+    webVideo: 1002095473
   },
   {
     id: 2,

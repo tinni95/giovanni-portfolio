@@ -23,7 +23,9 @@ export default function Home() {
   return (
     <ThemeWrapper>
       <Header1 />
-      <Hero />
+      <ThemeAwareWrapper>
+        <Hero />
+      </ThemeAwareWrapper>
       <div style={{  height: "72px" }}>
       </div>
       <ThemeAwareWrapper>

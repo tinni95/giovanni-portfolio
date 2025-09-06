@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TyperComponent from "@/components/common/TyperComponent";
-export default function Hero() {
+
+export default function Hero({ isLight = false }) {
   return (
     <div className="tmp-banner-one-area">
       <div className="container">
@@ -13,7 +14,7 @@ export default function Hero() {
                 <Image
                   className="tmp-scroll-trigger tmp-zoom-in animation-order-1"
                   alt="banner-img"
-                  src="/assets/images/banner/Giovanni.png"
+                  src={isLight ? "/assets/images/banner/Giovanni_light.png" : "/assets/images/banner/Giovanni.png"}
                   width={486}
                   height={781}
                 />
