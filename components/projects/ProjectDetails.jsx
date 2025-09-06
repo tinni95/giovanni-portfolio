@@ -1,8 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Appointment from "./Appointment";
 import { IPhoneFrame } from "../IPhoneFrame";
+
 export default function ProjectDetails({ portfolioItem }) {
+  // Markdown content is now processed at build time and included in portfolioItem.markdownContent
+
   return (
     <div className="project-details-area-wrapper tmp-section-gap">
       <div className="container">
@@ -19,60 +24,35 @@ export default function ProjectDetails({ portfolioItem }) {
           </div>
           <div className="col-lg-8">
             <div className="project-details-content-wrap">
-              <h2 className="title">{portfolioItem.title}</h2>
-              <p className="docs">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a
-                galltype and scrambled it to make a type specimen book. It has
-                survived not only five centuries tinto electronic typesetting
-                remaining essentially unchanged
-              </p>
-              <p className="docs">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown print
-              </p>
-              <div className="check-box-wrap">
-                <ul>
-                  <li>
-                    <h4 className="check-box-item">
-                      <span>
-                        <i className="fa-solid fa-circle-check" />
-                      </span>
-                      Ui/visual Design
-                    </h4>
-                  </li>
-                  <li>
-                    <h4 className="check-box-item">
-                      <span>
-                        <i className="fa-solid fa-circle-check" />
-                      </span>
-                      App Development
-                    </h4>
-                  </li>
-                  <li>
-                    <h4 className="check-box-item">
-                      <span>
-                        <i className="fa-solid fa-circle-check" />
-                      </span>
-                      Software Developer
-                    </h4>
-                  </li>
-                </ul>
-              </div>
+              {/* Dynamic Markdown Content Section */}
+              {portfolioItem.markdownContent && (
+                <div className="project-details-markdown-content markdown-content">
+                  <ReactMarkdown 
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      h1: ({children}) => <h1 className="title">{children}</h1>,
+                      h2: ({children}) => <h2 className="mini-title">{children}</h2>,
+                      h3: ({children}) => <h3 className="section-title">{children}</h3>,
+                      p: ({children}) => <p className="docs">{children}</p>,
+                      ul: ({children}) => <ul className="check-box-wrap"><li>{children}</li></ul>,
+                      li: ({children}) => (
+                        <h4 className="check-box-item">
+                          <span>
+                            <i className="fa-solid fa-circle-check" />
+                          </span>
+                          {children}
+                        </h4>
+                      ),
+                      strong: ({children}) => <strong className="font-semibold">{children}</strong>,
+                      code: ({children}) => <code className="bg-gray-100 px-2 py-1 rounded text-sm">{children}</code>,
+                      blockquote: ({children}) => <blockquote className="border-l-4 border-blue-500 pl-4 italic my-4">{children}</blockquote>
+                    }}
+                  >
+                    {portfolioItem.markdownContent}
+                  </ReactMarkdown>
+                </div>
+              )}
              
-              <h2 className="mini-title">
-                Elevate Your Business with IT Solutions
-              </h2>
-              <p className="docs">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a
-                galltype and scrambled it to make a type specimen book. It has
-                survived not only five centuries tinto electronic typesetting
-                remaining essentially unchanged
-              </p>
               <div className="project-details-swiper-wrapper">
                 <div className="swiper project-details-swiper">
                   <div className="swiper-wrapper">
@@ -135,19 +115,44 @@ export default function ProjectDetails({ portfolioItem }) {
               </div>
               <div className="body">
                 <div className="project-details-info">
-                  Name: <span>Hosting vps</span>
+                  Name: <span>{portfolioItem.projectDetails?.name || portfolioItem.title}</span>
                 </div>
                 <div className="project-details-info">
-                  Author: <span>Nadimul Islam</span>
+                  Author: <span>{portfolioItem.projectDetails?.author || "Giovanni D'Amico"}</span>
                 </div>
                 <div className="project-details-info">
-                  Date: <span>23 January,2024</span>
+                  Date: <span>{portfolioItem.projectDetails?.date || "2024"}</span>
                 </div>
                 <div className="project-details-info">
-                  Tags: <span>Host Web Design</span>
+                  Tags: <span>{portfolioItem.projectDetails?.tags || portfolioItem.tags?.join(", ") || "Development"}</span>
                 </div>
               </div>
             </div>
+            
+            {/* Services Section */}
+            {portfolioItem.projectDetails?.services && (
+              <div className="signle-side-bar project-details-area tmponhover mt-4">
+                <div className="header">
+                  <h3 className="title">Services Provided</h3>
+                </div>
+                <div className="body">
+                  <div className="check-box-wrap">
+                    <ul>
+                      {portfolioItem.projectDetails.services.map((service, index) => (
+                        <li key={index}>
+                          <h4 className="check-box-item">
+                            <span>
+                              <i className="fa-solid fa-circle-check" />
+                            </span>
+                            {service}
+                          </h4>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            )}
             
             {/* Separate sticky iPhone frame container */}
             <div className="sticky-iphone-frame" style={{ position: 'sticky', top: '120px', marginTop: '30px' }}>

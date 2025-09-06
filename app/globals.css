@@ -4,6 +4,108 @@
 
 /* Custom styles can be added here */
 
+/* Markdown Content Styling */
+.project-details-markdown-content {
+  margin-bottom: 2rem;
+}
+
+.markdown-content {
+  line-height: 1.7;
+  color: inherit;
+}
+
+.markdown-content .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.markdown-content .mini-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  color: var(--foreground);
+  line-height: 1.3;
+}
+
+.markdown-content .section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  color: var(--foreground);
+  line-height: 1.4;
+}
+
+.markdown-content .docs {
+  margin-bottom: 1rem;
+  color: var(--muted-foreground);
+  line-height: 1.7;
+}
+
+.markdown-content .check-box-wrap {
+  margin: 1.5rem 0;
+}
+
+.markdown-content .check-box-wrap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.markdown-content .check-box-wrap li {
+  margin-bottom: 0.75rem;
+}
+
+.markdown-content .check-box-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.markdown-content .check-box-item span {
+  margin-right: 0.75rem;
+  color: #10b981;
+  font-size: 1.1rem;
+}
+
+.markdown-content strong {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.markdown-content code {
+  background-color: var(--muted);
+  color: var(--foreground);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--muted-foreground);
+  background-color: var(--muted);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.markdown-content h1:first-child {
+  margin-top: 0;
+}
+
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
 /* iPhone Frame CSS Variables */
 :root {
   --background: 240 10% 3.9%;

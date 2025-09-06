@@ -1,4 +1,5 @@
 import { slugify } from "@/utlis/slugify";
+import { processPortfolioMarkdown } from "@/lib/markdown";
 
 export const portfolioItems = [
   {
@@ -10,6 +11,14 @@ export const portfolioItems = [
     title: "SAAS website design",
     tags: ["Figma", "Figma"],
     categories: ["Design", "Content writing", "Marketing"],
+    markdownFile: "content/projects/saas-website-design.md",
+    projectDetails: {
+      name: "SAAS Website Design",
+      author: "Giovanni D'Amico",
+      date: "December 2023",
+      tags: "Figma, UI/UX, SaaS",
+      services: ["UI/UX Design", "Prototyping", "User Research", "Design System"]
+    }
   },
   {
     id: 2,
@@ -57,8 +66,15 @@ export const portfolioItems2 = [
     height: 1040,
     title: "Cozy Desk - Work Cozy Everywhere",
     description: "Full Stack Developer - Cofounder",
-    appVideo: 1002095728,
-    webVideo: 1002095473
+    appVideo: 1116401749,
+    markdownFile: "content/projects/cozy-desk.md",
+    projectDetails: {
+      name: "Cozy Desk",
+      author: "Giovanni D'Amico",
+      date: "January 2024",
+      tags: "Remote Work, SaaS, Full Stack",
+      services: ["UI/UX Design", "Full Stack Development", "Mobile Development", "DevOps"]
+    }
   },
   {
     id: 2,
@@ -68,6 +84,14 @@ export const portfolioItems2 = [
     height: 1572,
     title: "Astarte - Artist Social Media",
     description: "Full Stack Developer",
+    markdownFile: "content/projects/astarte.md",
+    projectDetails: {
+      name: "Astarte",
+      author: "Giovanni D'Amico",
+      date: "March 2024",
+      tags: "Social Media, Blockchain, Art",
+      services: ["Full Stack Development", "Blockchain Integration", "Real-time Systems", "UI/UX Design"]
+    }
   },
   {
     id: 3,
@@ -77,6 +101,16 @@ export const portfolioItems2 = [
     height: 1572,
     title: "BBNB - Tourism and Travel",
     description: "Full Stack Developer",
+    appVideo: 1002095728,
+    webVideo: 1002095473,
+    markdownFile: "content/projects/bbnb.md",
+    projectDetails: {
+      name: "BBNB",
+      author: "Giovanni D'Amico",
+      date: "May 2024",
+      tags: "Travel, Tourism, Mobile App",
+      services: ["Full Stack Development", "Mobile Development", "API Design", "Third-party Integration"]
+    }
   },
   {
     id: 4,
@@ -86,6 +120,14 @@ export const portfolioItems2 = [
     height: 1572,
     title: "Tendit",
     description: "Full Stack Developer",
+    markdownFile: "content/projects/tendit.md",
+    projectDetails: {
+      name: "Tendit",
+      author: "Giovanni D'Amico",
+      date: "July 2024",
+      tags: "Productivity, Task Management, Collaboration",
+      services: ["Full Stack Development", "Real-time Systems", "UI/UX Design", "Database Design"]
+    }
   },
 ].map((elm) => {
   return {
@@ -561,7 +603,8 @@ export const portfolioItems12 = [
   };
 });
 
-export const allPortfolioItems = [
+// Process markdown content for all portfolio items at build time
+export const allPortfolioItems = processPortfolioMarkdown([
   ...portfolioItems,
   ...portfolioItems2,
   ...portfolioItems3,
@@ -574,4 +617,8 @@ export const allPortfolioItems = [
   ...portfolioItems10,
   ...portfolioItems11,
   ...portfolioItems12,
-];
+]);
+
+// Also export processed individual arrays for specific use cases
+export const processedPortfolioItems = processPortfolioMarkdown(portfolioItems);
+export const processedPortfolioItems2 = processPortfolioMarkdown(portfolioItems2);
