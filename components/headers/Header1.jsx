@@ -6,12 +6,7 @@ import Link from "next/link";
 import { openSidebar } from "@/utlis/toggleSidebar";
 import { openMobilemenu } from "@/utlis/toggleMobilemenu";
 import ThemeToggle from "@/components/common/ThemeToggle";
-import { useTheme } from "@/components/context/ThemeContext";
-export default function Header1({
-  darkLogo = "/assets/images/logo/logo.png",
-  lightLogo = "/assets/images/logo/logo.png",
-}) {
-  const { isLightMode } = useTheme();
+export default function Header1() {
   
   return (
     <header className="tmp-header-area-start header-one header--sticky header--transparent">
@@ -50,24 +45,7 @@ export default function Header1({
                     </div>
                   </div>
                 </div>
-                <div className="actions-area">
-                  <div className="tmp-side-collups-area d-none d-xl-block">
-                    <button
-                      className="tmp-menu-bars tmp_button_active"
-                      onClick={openSidebar}
-                    >
-                      <i className="fa-regular fa-bars-staggered" />
-                    </button>
-                  </div>
-                  <div className="tmp-side-collups-area d-block d-xl-none">
-                    <button
-                      className="tmp-menu-bars humberger_menu_active"
-                      onClick={openMobilemenu}
-                    >
-                      <i className="fa-regular fa-bars-staggered" />
-                    </button>
-                  </div>
-                </div>
+             
               </div>
             </div>
           </div>

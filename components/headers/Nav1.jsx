@@ -64,7 +64,7 @@ export default function Nav1() {
         ))}
       </ul>
       <ul className="tmp-mainmenu light-content">
-        {menuItemsLight.map((item, index) => (
+        {menuItems.map((item, index) => (
           <li
             key={index}
             className={`${item.hasDropdown ? "has-dropdown" : ""} ${

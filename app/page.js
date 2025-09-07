@@ -31,7 +31,6 @@ export default function Home() {
         <Facts />
         <Skills />
         <Education />
-        <Brands />
         <Portfolio />
       </ThemeAwareWrapper>
       <div style={{  height: "72px" }}>

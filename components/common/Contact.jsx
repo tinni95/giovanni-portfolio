@@ -1,4 +1,5 @@
 "use client";
+import { CONTACT_INFO } from "@/data/contactInfo";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 import { toast } from "react-toastify";
@@ -66,7 +67,7 @@ export default function Contact({
                     </span>
                     <div className="ft-link-wrap">
                       <h4 className="link-title">E-mail:</h4>
-                      <a href="#">nafiz125@gmail.com</a>
+                      <a href={`mailto:${CONTACT_INFO.email}`}>{CONTACT_INFO.email}</a>
                     </div>
                   </li>
                   <li className="tmp-scroll-trigger tmp-fade-in animation-order-2">
@@ -75,7 +76,7 @@ export default function Contact({
                     </span>
                     <div className="ft-link-wrap">
                       <h4 className="link-title">Location:</h4>
-                      <div>3891 Ranchview Dr. Richardson</div>
+                      <div>{CONTACT_INFO.location}</div>
                     </div>
                   </li>
                   <li className="tmp-scroll-trigger tmp-fade-in animation-order-3 tmp-link-animation">
@@ -84,7 +85,7 @@ export default function Contact({
                     </span>
                     <div className="ft-link-wrap">
                       <h4 className="link-title">Contact:</h4>
-                      <a href="#">01245789321</a>
+                      <a href={`tel:${CONTACT_INFO.phone}`}>{CONTACT_INFO.phone}</a>
                     </div>
                   </li>
                 </ul>

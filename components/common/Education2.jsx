@@ -10,13 +10,13 @@ export default function Education() {
             <span className="subtitle">Education &amp; Experience</span>
           </div>
           <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-            Empowering Creativity <br />
-            through
+            Building Excellence <br />
+            through Education
           </h2>
           <p className="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
-            Business consulting consultants provide expert advice and guida
-            businesses to help them improve their performance, efficiency, and
-            organizational
+            A strong foundation in computer science and continuous learning through 
+            university programs and specialized online courses have equipped me with 
+            the technical knowledge and skills essential for modern development.
           </p>
         </div>
         <h2 className="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">

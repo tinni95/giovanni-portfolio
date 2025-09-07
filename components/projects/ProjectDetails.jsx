@@ -56,54 +56,7 @@ export default function ProjectDetails({ portfolioItem }) {
               )}
              
               <div className="project-details-swiper-wrapper">
-                <div className="swiper project-details-swiper">
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="project-details-img">
-                        <Image
-                          alt="swiper-img"
-                          src="/assets/images/projects-details/project-detials-swiper-img-1.jpg"
-                          width={410}
-                          height={295}
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="project-details-img">
-                        <Image
-                          alt="swiper-img"
-                          src="/assets/images/projects-details/project-detials-swiper-img-2.png"
-                          width={410}
-                          height={295}
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="project-details-img">
-                        <Image
-                          alt="swiper-img"
-                          src="/assets/images/projects-details/project-detials-swiper-img-1.jpg"
-                          width={410}
-                          height={295}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="project-details-swiper-btn">
-                  <div className="project-swiper-button-prev">
-                    <span>
-                      <i className="fa-solid fa-arrow-left" />
-                    </span>
-                    Previous
-                  </div>
-                  <div className="project-swiper-button-next">
-                    Next{" "}
-                    <span>
-                      <i className="fa-solid fa-arrow-right" />
-                    </span>
-                  </div>
-                </div>
+                
               </div>
               </div>
               

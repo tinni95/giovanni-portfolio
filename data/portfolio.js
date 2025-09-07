@@ -17,7 +17,7 @@ export const portfolioItems2 = [
     projectDetails: {
       name: "Cozy Desk",
       author: "Giovanni D'Amico",
-      date: "January 2024",
+      date: "Sep 2025",
       tags: "Remote Work, SaaS, Full Stack",
       services: ["UI/UX Design", "Full Stack Development", "Mobile Development", "DevOps"]
     }
@@ -35,7 +35,7 @@ export const portfolioItems2 = [
     projectDetails: {
       name: "Astarte",
       author: "Giovanni D'Amico",
-      date: "March 2024",
+      date: "Jan 2024",
       tags: "Social Media, Blockchain, Art",
       services: ["Full Stack Development", "Blockchain Integration", "Real-time Systems", "UI/UX Design"]
     }
@@ -54,7 +54,7 @@ export const portfolioItems2 = [
     projectDetails: {
       name: "BBNB",
       author: "Giovanni D'Amico",
-      date: "May 2024",
+      date: "Jan 2024",
       tags: "Travel, Tourism, Mobile App",
       services: ["Full Stack Development", "Mobile Development", "API Design", "Third-party Integration"]
     }
@@ -72,7 +72,7 @@ export const portfolioItems2 = [
     projectDetails: {
       name: "Tendit",
       author: "Giovanni D'Amico",
-      date: "July 2024",
+      date: "Jan 2021",
       tags: "Productivity, Task Management, Collaboration",
       services: ["Full Stack Development", "Real-time Systems", "UI/UX Design", "Database Design"]
     }

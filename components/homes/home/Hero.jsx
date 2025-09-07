@@ -35,9 +35,10 @@ export default function Hero({ isLight = false }) {
                         strings={[
                           "Frontend Developer.",
                           "Backend Developer.",
-                          "Full Stack Developer.",
+                          "Graphic Designer.",
                           "Mobile Developer.",
                           "Software Architect.",
+                          "Ux/Ui Developer.",
                         ]}
                       />
                     </span>

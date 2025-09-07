@@ -17,12 +17,12 @@ export default function Portfolio({ isLight = false }) {
           </div>
           <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
             Transforming Ideas into <br />
-            Exceptional
+            Digital Solutions
           </h2>
           <p className="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
-            Business consulting consultants provide expert advice and guida
-            businesses to help them improve their performance, efficiency, and
-            organizational
+            Explore my portfolio of innovative projects that showcase expertise in 
+            full-stack development, mobile applications, and cutting-edge technologies. 
+            Each project represents a unique challenge solved with creativity and precision.
           </p>
         </div>
         <div className="row">

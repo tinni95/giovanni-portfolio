@@ -1,18 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Demomodal from "../modals/Demomodal";
-import Chat from "../common/Chat";
-import DemoToggler from "../common/DemoToggler";
-import ScrollTop from "../common/ScrollTop";
-import Sidebar from "../headers/Sidebar";
-import MobileMenu from "../headers/MobileMenu";
-import MobileMenuOnepage from "../headers/MobileMenuOnepage";
-import { footerLinks, footerLinksWhite } from "@/data/footerLinks";
-export default function Footer3({
-  darkLogo = "/assets/images/logo/white-logo-reeni.png",
-  lightLogo = "/assets/images/logo/logo-white.png",
-}) {
+
+import { CONTACT_INFO } from "@/data/contactInfo";
+export default function Footer3() {
   return (
     <>
       <footer className="footer-area footer-style-one-wrapper  tmp-section-gap">
@@ -41,37 +32,11 @@ export default function Footer3({
                   <p className="description">
                     <span>Get Ready</span> To <br /> Create Great
                   </p>
-                  <form
-                    onSubmit={(e) => e.preventDefault()}
-                    className="newsletter-form-1 mt--40"
-                  >
-                    <input type="email" placeholder="Email Adress" />
-                    <span className="form-icon">
-                      <i className="fa-regular fa-envelope" />
-                    </span>
-                  </form>
+            
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="single-footer-wrapper quick-link-wrap">
-                  <h5 className="ft-title">Quick Link</h5>
-                  <ul className="ft-link tmp-link-animation dark-content">
-                    {footerLinks.map((item, index) => (
-                      <li key={index}>
-                        <Link href={item.href}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <ul className="ft-link tmp-link-animation light-content2">
-                    {footerLinksWhite.map((item, index) => (
-                      <li key={index}>
-                        <Link href={item.href}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6">
+            
+              <div className="col-lg-6 col-md-8">
                 <div className="single-footer-wrapper contact-wrap">
                   <h5 className="ft-title">Contact </h5>
                   <ul className="ft-link tmp-link-animation">
@@ -79,34 +44,24 @@ export default function Footer3({
                       <span className="ft-icon">
                         <i className="fa-solid fa-envelope" />
                       </span>
-                      <a href="#">nafiz125@gmail.com</a>
+                      <a href={`mailto:${CONTACT_INFO.email}`}>{CONTACT_INFO.email}</a>
                     </li>
                     <li>
                       <span className="ft-icon">
                         <i className="fa-solid fa-location-dot" />
                       </span>
-                      3891 Ranchview Dr. Richardson
+                      {CONTACT_INFO.location}
                     </li>
                     <li>
                       <span className="ft-icon">
                         <i className="fa-solid fa-phone" />
                       </span>
-                      <a href="#">01245789321</a>
+                      <a href={`tel:${CONTACT_INFO.phone}`}>{CONTACT_INFO.phone}</a>
                     </li>
                   </ul>
                   <div className="social-link footer">
-                    <a href="#">
-                      <i className="fa-brands fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fa-brands fa-linkedin-in" />
-                    </a>
-                    <a href="#">
-                      <i className="fa-brands fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fa-brands fa-facebook-f" />
-                    </a>
+                
+               
                   </div>
                 </div>
               </div>
