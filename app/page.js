@@ -8,7 +8,6 @@ import Hero from "@/components/homes/home/Hero";
 import Portfolio from "@/components/common/Portfolio2";
 import Skills from "@/components/common/Skills";
 import CommonComponents from "@/components/common/CommonComponents";
-import ThemeWrapper from "@/components/common/ThemeWrapper";
 import ThemeAwareWrapper from "@/components/common/ThemeAwareWrapper";
 import Footer2 from "@/components/footers/Footer2";
 import Footer3 from "@/components/footers/Footer3";
@@ -21,7 +20,7 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <ThemeWrapper>
+    <>
       <Header1 />
       <ThemeAwareWrapper>
         <Hero />
@@ -40,6 +39,6 @@ export default function Home() {
       <Footer3 />
       <Copyright />
       <CommonComponents />
-    </ThemeWrapper>
+    </>
   );
 }

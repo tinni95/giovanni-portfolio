@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { portfolioItems12 } from "@/data/portfolio";
+import { allPortfolioItems } from "@/data/portfolio";
 
 export default function Projects({ isLight = false }) {
   return (
     <section className="tmp-latest-portfolio tmp-section-gap">
       <div className="container">
         <div className="row">
-          {portfolioItems12.map((item) => (
+          {allPortfolioItems.map((item) => (
             <div
               key={item.id} // Use the unique ID as the key
               className="col-lg-6 col-md-6 col-12" // Static column classes

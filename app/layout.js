@@ -4,6 +4,7 @@ import "odometer/themes/odometer-theme-default.css"; // Import theme
 import "react-toastify/dist/ReactToastify.css";
 import LayoutWrapper from "@/components/common/LayoutWrapper";
 import { ThemeProvider } from "@/components/context/ThemeContext";
+import ThemeWrapper from "@/components/common/ThemeWrapper";
 import Script from 'next/script';
 import { ToastContainer } from "react-toastify";
 export const metadata = {
@@ -38,20 +39,22 @@ export default function RootLayout({ children }) {
           strategy="beforeInteractive"
         />
         <ThemeProvider>
-          <LayoutWrapper>
-            <ToastContainer
-              position="top-right"
-              // autoClose={2000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-            />
-            {children}
-          </LayoutWrapper>
+          <ThemeWrapper>
+            <LayoutWrapper>
+              <ToastContainer
+                position="top-right"
+                // autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+              />
+              {children}
+            </LayoutWrapper>
+          </ThemeWrapper>
         </ThemeProvider>
       </body>
     </html>

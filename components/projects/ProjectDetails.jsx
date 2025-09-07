@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import Appointment from "./Appointment";
 import { IPhoneFrame } from "../IPhoneFrame";
 import WebExperience from "./WebExperience";
+import WebExperienceFull from "./WebExperiencFull";
 
 export default function ProjectDetails({ portfolioItem }) {
   // Markdown content is now processed at build time and included in portfolioItem.markdownContent
@@ -107,7 +108,7 @@ export default function ProjectDetails({ portfolioItem }) {
               </div>
               
               {/* Web Video Section */}
-              <WebExperience webVideo={portfolioItem.webVideo} title={portfolioItem.title} />
+              <WebExperienceFull webVideo={portfolioItem.webVideo} title={portfolioItem.title} />
  
             </div>
           <div className="col-lg-4">
@@ -119,9 +120,7 @@ export default function ProjectDetails({ portfolioItem }) {
                 <div className="project-details-info">
                   Name: <span>{portfolioItem.projectDetails?.name || portfolioItem.title}</span>
                 </div>
-                <div className="project-details-info">
-                  Author: <span>{portfolioItem.projectDetails?.author || "Giovanni D'Amico"}</span>
-                </div>
+  
                 <div className="project-details-info">
                   Date: <span>{portfolioItem.projectDetails?.date || "2024"}</span>
                 </div>
