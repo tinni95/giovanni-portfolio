@@ -133,3 +133,41 @@
     }
   }
 }
+
+// Live Badge Styles
+.live-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #00d4aa, #00b894);
+  border-radius: 20px;
+  padding: 6px 12px;
+  box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
+  z-index: 10;
+  animation: pulse 2s infinite;
+  
+  .badge-text {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(0, 212, 170, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
+  }
+}
+
+// Ensure the img-box has relative positioning for absolute badge
+.img-box {
+  position: relative;
+}

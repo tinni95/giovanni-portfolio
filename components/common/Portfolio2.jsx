@@ -47,6 +47,11 @@ export default function Portfolio({ isLight = false }) {
                         height={item.height}
                       />
                     </Link>
+                    {item.livelink && (
+                      <div className="live-badge">
+                        <span className="badge-text">Live</span>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="portfolio-card-content-wrap">

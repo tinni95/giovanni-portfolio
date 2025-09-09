@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
@@ -15,13 +17,52 @@ export default function ProjectDetails({ portfolioItem }) {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="project-details-thumnail-wrap">
+            <div className="project-details-thumnail-wrap" style={{ position: 'relative' }}>
               <Image
                 alt="thumbnail"
                 src={portfolioItem.imageSrc}
                 width={1290}
                 height={560}
               />
+              {portfolioItem.livelink && (
+                <a
+                  href={portfolioItem.livelink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-link-button"
+                  style={{
+                    position: 'absolute',
+                    bottom: '20px',
+                    right: '20px',
+                    backgroundColor: 'rgba(0, 255, 65, 0.8)',
+                    color: 'black',
+                    padding: '12px 24px',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    boxShadow: '0 4px 12px rgba(0, 255, 65, 0.3)',
+                    transition: 'all 0.3s ease',
+                    zIndex: 10,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#00CC33';
+                    e.target.style.transform = 'translateY(-2px)';
+                    e.target.style.boxShadow = '0 6px 16px rgba(0, 255, 65, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#00FF41';
+                    e.target.style.transform = 'translateY(0)';
+                    e.target.style.boxShadow = '0 4px 12px rgba(0, 255, 65, 0.3)';
+                  }}
+                >
+                  <i className="fa-solid fa-external-link-alt" style={{ fontSize: '12px' }}></i>
+                  <b>Live Link</b>
+                </a>
+              )}
             </div>
           </div>
           <div className="col-lg-8">
@@ -60,6 +101,21 @@ export default function ProjectDetails({ portfolioItem }) {
               </div>
               </div>
               
+              {/* Showcase Image Section */}
+              {portfolioItem.showcase && (
+                <div className="project-showcase-wrapper" style={{ marginTop: '40px', marginBottom: '40px' }}>
+                  <div className="project-showcase-image">
+                    <Image
+                      alt={`${portfolioItem.title} showcase`}
+                      src={portfolioItem.showcase}
+                      width={1290}
+                      height={800}
+                      style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+                    />
+                  </div>
+                </div>
+              )}
+              
               {/* Web Video Section */}
               <WebExperienceFull webVideo={portfolioItem.webVideo} title={portfolioItem.title} />
  
@@ -85,12 +141,8 @@ export default function ProjectDetails({ portfolioItem }) {
             
      
             {/* Separate sticky iPhone frame container */}
-            <div className="sticky-iphone-frame" style={{ position: 'sticky', top: '120px', marginTop: '30px' }}>
-              <div className="transform hover:scale-105 transition-all duration-300">
                 <IPhoneFrame vimeoId={portfolioItem.appVideo} className="drop-shadow-2xl" />
-                <p className="text-center mt-4 text-sm text-foreground/60 font-medium">Mobile Experience</p>
-              </div>
-            </div>
+               
           </div>
         </div>
       </div>

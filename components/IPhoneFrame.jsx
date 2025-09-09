@@ -1,7 +1,12 @@
 import { cn } from "@/utlis/utils";
 
 export const IPhoneFrame = ({ vimeoId, className }) => {
+  if(!vimeoId) return null;
   return (
+    <div className="sticky-iphone-frame" style={{ position: 'sticky', top: '120px', marginTop: '30px' }}>
+    <div className="transform hover:scale-105 transition-all duration-300">
+
+ 
     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} className={cn("relative mx-auto w-full", className)}>
       {/* iPhone Frame */}
       <div className="relative w-full max-w-[280px] aspect-[280/570] bg-iphone-frame rounded-[3rem] p-2 shadow-phone">
@@ -37,5 +42,8 @@ export const IPhoneFrame = ({ vimeoId, className }) => {
         <div className="absolute right-0 top-32 w-1 h-12 bg-iphone-frame rounded-l-lg shadow-inner"></div>
       </div>
     </div>
+    <p className="text-center mt-4 text-sm text-foreground/60 font-medium">Mobile Experience</p>
+    </div>
+  </div>
   );
 };

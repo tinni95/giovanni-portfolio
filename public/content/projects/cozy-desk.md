@@ -1,42 +1,41 @@
-# Cozy Desk - Work Cozy Everywhere
+# CozyDesk - AI-Powered Workspace Discovery
 
-A revolutionary workspace management platform that enables professionals to work comfortably from anywhere in the world.
+A mobile app for Android and iOS that uses cutting-edge AI technologies to help remote workers find comfortable places to work.
 
 ## Project Overview
 
-Cozy Desk is a comprehensive solution that connects remote workers with comfortable, productive workspaces. As a Full Stack Developer and Cofounder, I led the development of this platform from concept to deployment.
+CozyDesk is a personal project where I serve as a cofounder. The app leverages advanced AI algorithms to gather information and intelligently list places where remote workers will be most comfortable working. Our platform covers everything from free-access cafes and libraries to premium coworking spaces.
 
 ## Key Features
 
-- **Smart Workspace Discovery**: AI-powered matching system
-- **Real-time Availability**: Live booking and scheduling
-- **Community Integration**: Connect with like-minded professionals
-- **Mobile-First Design**: Seamless experience across all devices
+- **AI-Powered Discovery**: Advanced algorithms analyze and recommend optimal workspaces
+- **Comprehensive Coverage**: From free cafes and libraries to paid coworking spaces
+- **Mobile-First Experience**: Native iOS and Android applications
+- **Smart Filtering**: Personalized recommendations based on work preferences
 
 ## Technologies Used
 
-- **Frontend**: React, Next.js, TypeScript
-- **Backend**: Node.js, Express, PostgreSQL
-- **Mobile**: React Native
-- **Cloud**: AWS, Docker, Kubernetes
+- **Mobile Development**: React Native (iOS & Android)
+- **Backend**: Supabase for database and backend services
+- **AI/ML**: Custom algorithms for workspace analysis and recommendations
+- **Design**: Custom UI/UX design and implementation
 
 ## My Role
 
-As a Full Stack Developer and Cofounder, I was responsible for:
+As a Cofounder and Full Stack Developer, I was responsible for:
 
-- **Architecture Design**: Scalable microservices architecture
-- **Frontend Development**: Responsive web and mobile applications
-- **Backend Development**: RESTful APIs and database design
-- **DevOps**: CI/CD pipeline setup and deployment automation
-- **Team Leadership**: Mentoring junior developers and code reviews
+- **Frontend Development**: Complete mobile app development for iOS and Android
+- **UI/UX Design**: End-to-end design process from wireframes to final implementation
+- **Backend Development**: Supabase integration and API development
+- **App Store Publishing**: Managing the publishing process to both iOS App Store and Google Play Store
+- **Project Management**: Leading the technical direction and development timeline
 
-## Results
+## Current Status
 
-- Successfully launched MVP within 6 months
-- Achieved 10,000+ registered users in first year
-- Secured $500K in seed funding
-- Featured in major tech publications
+- **Development Phase**: Currently in final development stages
+- **Release Timeline**: Soon to be released on iOS App Store and Google Play Store
+- **Platform**: Native mobile applications for both major platforms
 
-## Technical Challenges
+## Technical Approach
 
-The most challenging aspect was building a real-time booking system that could handle high concurrency while maintaining data consistency. I implemented a distributed locking mechanism using Redis and PostgreSQL advisory locks to ensure smooth user experience even during peak usage.
+The core challenge was developing an AI system that could effectively analyze and categorize different types of workspaces while providing accurate recommendations. The integration with Supabase provides a robust backend infrastructure that supports real-time data updates and user preferences, ensuring the app can scale effectively as we grow our user base.
