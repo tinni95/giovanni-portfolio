@@ -16,9 +16,9 @@ import Testimonials from "@/components/homes/home/Testimonials";
 import CommonComponents from "@/components/common/CommonComponents";
 export const metadata = {
   title:
-    "Home 01 || Personal Portfolio React Nextjs Template | Freelancer & Developer Portfolio",
+    "Giovanni Damico - Senior Developer | Full Stack Developer Portfolio",
   description:
-    "Personal Portfolio React Nextjs Template | Freelancer & Developer Portfolio",
+    "Giovanni Damico is a senior full stack developer with expertise in modern web technologies. Explore his portfolio showcasing innovative projects, technical skills, and professional experience in software development.",
 };
 export default function Home() {
   return (

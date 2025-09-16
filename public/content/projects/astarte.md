@@ -47,7 +47,7 @@ As the Senior Manager and Technical Lead, I was responsible for:
 
 ## Impact
 
-- **Leadership Success**: Successfully led a team of 4 professionals (2 developers, 1 designer) through the delivery of one of the most complex applications built
+- **Leadership Success**: Successfully led a team of 3 professionals (2 developers, 1 designer) through the delivery of one of the most complex applications built
 - **Technical Excellence**: Demonstrated advanced technical skills in AWS services, real-time communication, and complex state management while mentoring junior developers
 - **Architecture Mastery**: Showcased ability to design sophisticated database architecture with multiple sort keys for advanced search functionality
 - **Team Development**: Mentored junior developers and established code quality standards that improved team productivity

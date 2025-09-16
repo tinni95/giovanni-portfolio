@@ -99,7 +99,7 @@ export const portfolioItems2 = [
   {
     id: 5,
     animationOrder: 5,
-    imageSrc: "/assets/images/latest-portfolio/opinionpreview.jpg",
+    imageSrc: "/assets/images/latest-portfolio/elearning.jpg",
     width: 1939,
     height: 1572,
     title: "Opinion - E learning platform",

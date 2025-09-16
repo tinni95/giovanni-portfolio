@@ -12,17 +12,17 @@ export default function Contact() {
     emailjs
       .sendForm(
         // EmailJS service ID - identifies which email service to use
-        "service_cyobi0y",
+        "service_6kx7sfu",
 
         // EmailJS template ID - specifies which email template to use
-        "template_4nbexqj",
+        "template_ly9uknm",
 
         // Reference to the HTML form element containing user input
         form.current,
 
         {
           // Public API key for authentication with EmailJS
-          publicKey: "D79JdTqxXVCcQBXL4",
+          publicKey: "gZqNx0fJWjfLCG_UE",
         }
       )
       .then((res) => {

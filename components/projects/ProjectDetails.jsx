@@ -8,6 +8,7 @@ import Appointment from "./Appointment";
 import { IPhoneFrame } from "../IPhoneFrame";
 import WebExperience from "./WebExperience";
 import WebExperienceFull from "./WebExperiencFull";
+import FullScreenVideoBackground from "./FullScreenVideoBackground";
 
 export default function ProjectDetails({ portfolioItem }) {
   // Markdown content is now processed at build time and included in portfolioItem.markdownContent
@@ -77,14 +78,14 @@ export default function ProjectDetails({ portfolioItem }) {
                       h2: ({children}) => <h2 className="mini-title">{children}</h2>,
                       h3: ({children}) => <h3 className="section-title">{children}</h3>,
                       p: ({children}) => <p className="docs">{children}</p>,
-                      ul: ({children}) => <ul className="check-box-wrap"><li>{children}</li></ul>,
+                      ul: ({children}) => <ul className="check-box-wrap">{children}</ul>,
                       li: ({children}) => (
-                        <h4 className="check-box-item">
+                        <li className="check-box-item">
                           <span>
                             <i className="fa-solid fa-circle-check" />
                           </span>
-                          {children}
-                        </h4>
+                          <span className="check-box-text">{children}</span>
+                        </li>
                       ),
                       strong: ({children}) => <strong className="font-semibold">{children}</strong>,
                       code: ({children}) => <code className="bg-gray-100 px-2 py-1 rounded text-sm">{children}</code>,
@@ -116,8 +117,6 @@ export default function ProjectDetails({ portfolioItem }) {
                 </div>
               )}
               
-              {/* Web Video Section */}
-              <WebExperienceFull webVideo={portfolioItem.webVideo} title={portfolioItem.title} />
  
             </div>
           <div className="col-lg-4">
@@ -146,6 +145,12 @@ export default function ProjectDetails({ portfolioItem }) {
           </div>
         </div>
       </div>
+      
+      {/* Full Screen Video Background */}
+      <FullScreenVideoBackground 
+        webVideo={portfolioItem.webVideo} 
+        title={portfolioItem.title} 
+      />
     </div>
   );
 }

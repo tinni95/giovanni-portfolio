@@ -62,6 +62,7 @@ export default function Hero({ isLight = false }) {
                       </span>
                     </span>
                   </Link>
+                  <div style={{  height: "22px" }}/>
                 </div>
               </div>
             </div>

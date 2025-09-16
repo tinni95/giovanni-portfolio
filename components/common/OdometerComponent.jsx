@@ -5,26 +5,53 @@ import React, { useEffect, useRef, useState } from "react";
 const OdometerComponent = ({ max }) => {
   const odometerRef = useRef(null);
   const [value, setValue] = useState(0);
+  const [isOdometerReady, setIsOdometerReady] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const odometerInitRef = useRef();
+  const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    import("odometer").then((Odometer) => {
-      // Initialize Odometer or do something with it
-
-      // Example usage of Odometer
-      if (Odometer && odometerRef.current) {
-        odometerInitRef.current = new Odometer.default({
-          el: odometerRef.current,
-          value,
-        });
+    let isMounted = true;
+    
+    const initializeOdometer = async () => {
+      try {
+        const Odometer = await import("odometer");
+        
+        if (isMounted && Odometer && odometerRef.current) {
+          odometerInitRef.current = new Odometer.default({
+            el: odometerRef.current,
+            value: 0,
+            format: '(,ddd)',
+            theme: 'default'
+          });
+          setIsOdometerReady(true);
+        }
+      } catch (error) {
+        console.warn("Failed to load odometer library:", error);
+        // Fallback: just show the number without animation
+        setIsOdometerReady(true);
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
-    });
+    };
+
+    initializeOdometer();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
+
   useEffect(() => {
-    if (odometerRef.current && odometerInitRef.current) {
-      odometerInitRef.current.update(value); // Update odometer when value changes
+    if (isOdometerReady && odometerInitRef.current) {
+      odometerInitRef.current.update(value);
+    } else if (isOdometerReady && !odometerInitRef.current) {
+      // Fallback: update display value directly
+      setDisplayValue(value);
     }
-  }, [value]);
+  }, [value, isOdometerReady]);
 
   const startCountup = () => {
     setValue(max);
@@ -61,7 +88,7 @@ const OdometerComponent = ({ max }) => {
   return (
     <>
       <div ref={odometerRef} className="odometer">
-        0
+        {isLoading ? 0 : (isOdometerReady && !odometerInitRef.current ? displayValue : 0)}
       </div>
     </>
   );

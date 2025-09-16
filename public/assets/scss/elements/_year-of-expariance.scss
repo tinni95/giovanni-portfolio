@@ -60,6 +60,9 @@
             font-weight: 700;
             margin-bottom: 0;
             flex-basis: 40%;
+            @media #{variables.$laptop-device} {
+                font-size: 100px;
+            }
             @media #{variables.$lg-layout} {
                 font-size: 100px;
             }
@@ -79,6 +82,9 @@
             line-height: 130%;
             text-transform: capitalize;
             margin-bottom: 0;
+            @media #{variables.$laptop-device} {
+                font-size: 37px;
+            }
             @media #{variables.$lg-layout} {
                 font-size: 37px;
             }

@@ -7,7 +7,7 @@ export default function Facts() {
     <section className="counter-area">
       <div className="container">
         <div className="row g-5">
-          <div className="col-12 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <div className="year-of-expariance-wrapper bg-blur-style-one tmp-scroll-trigger tmp-fade-in animation-order-1">
               <div className="year-expariance-wrap">
                 {/* <h2 class="year-number"><span class="counter">25 </span> </h2> */}
@@ -24,7 +24,7 @@ export default function Facts() {
               </p>
             </div>
           </div>
-          <div className="col-12 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <div className="counter-area-right-content">
               <div className="row g-5">
                 {counters.map((item, index) => (

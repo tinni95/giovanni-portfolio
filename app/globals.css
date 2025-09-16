@@ -60,17 +60,19 @@
 
 .markdown-content .check-box-item {
   display: flex;
-  align-items: center;
   font-size: 1.5rem;
+  
   font-weight: 500;
-  color: var(--foreground);
   margin: 0;
+}
+.markdown-content i {
+  margin-top:5px;
+  color: #10b981;
 }
 
 .markdown-content .check-box-item span {
   margin-right: 0.75rem;
-  color: #10b981;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
 }
 
 .markdown-content strong {
